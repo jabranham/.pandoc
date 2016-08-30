@@ -67,22 +67,6 @@
       </substitute>
     </names>
   </macro>
-  <macro name="access">
-    <choose>
-      <if type="legal_case" match="none">
-        <choose>
-          <if variable="URL">
-            <group delimiter=" ">
-              <text variable="URL"/>
-              <group prefix="(" suffix=")">
-                <date variable="accessed" form="text"/>
-              </group>
-            </group>
-          </if>
-        </choose>
-      </if>
-    </choose>
-  </macro>
   <macro name="title">
     <choose>
       <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
@@ -230,7 +214,6 @@
           </group>
         </else>
       </choose>
-      <text prefix=" " macro="access" suffix="."/>
     </layout>
   </bibliography>
 </style>
